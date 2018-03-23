@@ -1,3 +1,10 @@
+---
+layout: post
+title: 在Deepin系统中安装Anaconda
+categories: Deepin
+description: Deepin安装Anaconda
+keywords: Deepin, Anaconda
+---
 # 在Deepin系统中安装Anaconda
 ## 运行安装Anaconda
 ```
