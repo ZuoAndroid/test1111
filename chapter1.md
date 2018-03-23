@@ -19,10 +19,10 @@ Do you accept the license terms? [yes|no]
 ```
 选择yes继续安装
 此时，系统将提示您选择安装的位置。您可以按ENTER接受默认位置，或指定其他位置以进行修改。
-按ENTER选择默认安装，安装过程需要一些时间
+在这里我选择了其它路径的安装，安装过程需要一些时间
 ```
-[/root/anaconda3] >>> 
-PREFIX=/root/anaconda3
+[/root/anaconda3] >>> /home/wenbin/anaconda3
+PREFIX=/home/wenbin/anaconda3
 
 installing: python-3.6.3-hc9025b9_1 ...
 Python 3.6.3 :: Anaconda, Inc.
@@ -38,3 +38,23 @@ installing: gmp-6.1.2-hb3b607b_0 ...
 .......................
 ```
 完成后，您将收到以下输出：
+```
+installation finished.
+Do you wish the installer to prepend the Anaconda3 install location
+to PATH in your /root/.bashrc ? [yes|no]
+[no] >>> yes
+```
+键入yes ，以便可以使用conda命令。接下来将看到以下输出：
+```
+Appending source /home/wenbin/anaconda3/bin/activate to /root/.bashrc
+A backup will be made to: /root/.bashrc-anaconda3.bak
+
+
+For this change to become active, you have to open a new terminal.
+
+Thank you for installing Anaconda3!
+```
+为了激活安装，你应该来源~/.bashrc文件：
+```
+source ~/.bashrc
+```
