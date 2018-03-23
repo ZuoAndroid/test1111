@@ -66,3 +66,32 @@ export PATH="/<path to anaconda>/bin:$PATH"
 ```
 source ~/.bashrc
 ```
+之后你可以验证你的安装通过使用conda命令，例如与list ：
+```
+wenbin@wenbin:~$ conda list
+# packages in environment at /home/wenbin/anaconda3:
+#
+_ipyw_jlab_nb_ext_conf    0.1.0            py36he11e457_0  
+alabaster                 0.7.10           py36h306e16b_0  
+anaconda                  5.0.1            py36hd30a520_1  
+anaconda-client           1.6.5            py36h19c0dcd_0  
+anaconda-navigator        1.6.9            py36h11ddaaa_0 
+..............
+```
+## 设置Anaconda环境
+查看可用的Python解释器版本：
+```
+conda search "^python$"
+```
+使用最新版本的Python 3创建一个环境。我们可以通过将版本3分配给python参数来实现。 我们将调用环境my_python ，但是您可能希望为您的环境使用更具描述性的名称，特别是如果您使用环境来访问多个版本的Python。
+```
+conda create --name my_python python=3
+```
+通过一下命令来激活环境
+```
+source activate my_python
+```
+通过一下命令添加其他包，比如requests
+```
+conda install --name my_python requests
+```
