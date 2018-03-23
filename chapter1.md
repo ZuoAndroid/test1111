@@ -54,6 +54,14 @@ For this change to become active, you have to open a new terminal.
 
 Thank you for installing Anaconda3!
 ```
+如果你选择了no，那么你就需要手动的将Anaconda3添加的环境变量当中
+请打开文本编辑器并从主目录打开文件.bashrc或.bash_profile。添加该行。
+```
+export PATH="/<path to anaconda>/bin:$PATH"
+```
+注意：将``<path-to-anaconda>``替换为安装的anaconda文件的实际路径。
+保存文件。如果您打开任何终端窗口，请关闭它们，然后打开一个新窗口。您可能需要重新启动计算机才能使PATH更改生效。
+
 为了激活安装，你应该来源~/.bashrc文件：
 ```
 source ~/.bashrc
