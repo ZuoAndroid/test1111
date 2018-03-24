@@ -1,4 +1,5 @@
 ## Deepin中安装配置ChromeDriver
+### 查看当前的Chrome版本信息
 在谷歌浏览器地址栏中输入`chrome://version/`可以查看当前的Chrome信息：
 ```
 Google Chrome：	62.0.3202.62 (正式版本) （64 位）
@@ -47,5 +48,24 @@ v2.7	|v30-33
 v2.6	|v29-32
 v2.5	|v29-32
 v2.4	|v29-32
+###下载对应的Chromedriver版本
+下载地址：
+```
+http://npm.taobao.org/mirrors/chromedriver/
+```
+### 配置
+将下载来的ChromeDriver解压，得到一个ChromeDriver文件
+我们只需要将ChromeDriver文件放到``/uer/bin/``路径下
+```
+sudo cp chromedriver /usr/bin/
+```
+### 测试安装是否成功
+编写py文件写入以下代码：
+```
+from selenium import webdriver
 
+driver = webdriver.Chrome()
+driver.get("https://www.baidu.com")
+```
+运行之后，如果能过弹出Chrome页面，就说明安装成功：
 
