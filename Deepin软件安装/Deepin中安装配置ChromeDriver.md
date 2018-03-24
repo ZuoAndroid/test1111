@@ -68,4 +68,4 @@ driver = webdriver.Chrome()
 driver.get("https://www.baidu.com")
 ```
 运行之后，如果能过弹出Chrome页面，就说明安装成功：
-
+![](/assets/Chrome.png)
